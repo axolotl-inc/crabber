@@ -60,7 +60,6 @@ public class Window implements Runnable{
                 GLFW.glfwMakeContextCurrent(window);
                 GL.createCapabilities();
                 GLFW.glfwShowWindow(window);
-                GL11.glClearColor(0.2f, 0.5f, 1.0f, 1.0f);
         }
 
         public void create(){
@@ -76,6 +75,7 @@ public class Window implements Runnable{
         }
 
         public void processInput(){
+                GL11.glClearColor(0.2f, 0.5f, 1.0f, 1.0f);
                 if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_ESCAPE) == GLFW.GLFW_PRESS){
                         GLFW.glfwSetWindowShouldClose(window, true);
                 }
