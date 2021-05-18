@@ -26,6 +26,7 @@ public class Window implements Runnable{
                 while(!GLFW.glfwWindowShouldClose(window)){
                         loop();
                 }
+
                 Callbacks.glfwFreeCallbacks(window);
                 GLFW.glfwDestroyWindow(window);
                 GLFW.glfwTerminate();
